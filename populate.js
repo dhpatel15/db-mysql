@@ -5,38 +5,38 @@ var counter = 1;
 var counterReivew = 1;
 var counterUsers = 1;
 
-// function getRandomProducts() {
-//   return new Promise(function(resolve, reject) {
-//     setTimeout(function() {
-//     	var nameArr= [];
-// 			for(var i = 0; i < 50000; i++){
-// 				var randomProduct = faker.commerce.product() + counter;
-// 				var miniArr = [randomProduct]
-// 				nameArr.push(miniArr)
-// 			 	counter++;
-// 			}
+function getRandomProducts() {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+    	var nameArr= [];
+			for(var i = 0; i < 50000; i++){
+				var randomProduct = faker.commerce.product() + counter;
+				var miniArr = [randomProduct]
+				nameArr.push(miniArr)
+			 	counter++;
+			}
 
-// 			db.interstProductName(nameArr, function(err, result){
-// 				if(err){
-// 					console.log(err)
-// 				}else {
-// 					console.log(counter)
-//         	resolve();
-//       	}
-// 			})
-//     }, 1000);
-//   }); 
-// }
+			db.interstProductName(nameArr, function(err, result){
+				if(err){
+					console.log(err)
+				}else {
+					console.log(counter)
+        	resolve();
+      	}
+			})
+    }, 1000);
+  }); 
+}
 
-// async function populateProducts() {
-// 	console.time('Start')
-//   for (let x = 0; x < 200; x++) {
-//     console.log(await getRandomProducts());
-//   }
-//   console.timeEnd('Start')
-// }
+async function populateProducts() {
+	console.time('Start')
+  for (let x = 0; x < 200; x++) {
+    console.log(await getRandomProducts());
+  }
+  console.timeEnd('Start')
+}
 
-// populateProducts();
+populateProducts();
 
 
 // function getRandomUsers() {
